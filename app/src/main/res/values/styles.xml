@@ -1,8 +1,48 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+    <!--    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar"/>-->
+    <!-- Customize your theme here. -->
+
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar"></style>
+
+    <style name="DefaultAppTheme" parent="BaseTheme">
         <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="dialog_parent_style" parent="@android:style/Theme.Dialog">
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 背景透明 -->
+        <item name="android:background">@android:color/transparent</item>
+        <!-- 模糊 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <!-- 点击屏幕dialog消失 -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="TransparentDialog" parent="dialog_parent_style"></style>
+
+    <style name="main_tab_icon_style">
+        <item name="android:layout_width">0px</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center_horizontal|bottom</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">@dimen/dp_2</item>
+        <item name="android:paddingTop">@dimen/dp_4</item>
+        <item name="android:textColor">@drawable/selector_main_nav_text</item>
+        <item name="android:textSize">@dimen/font_10</item>
     </style>
 
 </resources>

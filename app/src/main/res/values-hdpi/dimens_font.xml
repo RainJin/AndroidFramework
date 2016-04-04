@@ -1,0 +1,27 @@
+<resources>
+
+    <dimen name="font_9">8.0sp</dimen>
+    <dimen name="font_10">8.5sp</dimen>
+    <dimen name="font_11">9.5sp</dimen>
+    <dimen name="font_12">10.5sp</dimen>
+    <dimen name="font_13">11.5sp</dimen>
+    <dimen name="font_14">12.5sp</dimen>
+    <dimen name="font_15">13.5sp</dimen>
+    <dimen name="font_16">14.5sp</dimen>
+    <dimen name="font_17">15.5sp</dimen>
+    <dimen name="font_18">16.5sp</dimen>
+    <dimen name="font_19">17.5sp</dimen>
+    <dimen name="font_20">18.5sp</dimen>
+    <dimen name="font_21">19.5sp</dimen>
+    <dimen name="font_22">20.5sp</dimen>
+    <dimen name="font_23">21.5sp</dimen>
+    <dimen name="font_24">22.5sp</dimen>
+    <dimen name="font_25">23.5sp</dimen>
+    <dimen name="font_26">24.5sp</dimen>
+    <dimen name="font_27">25.5sp</dimen>
+    <dimen name="font_28">26.5sp</dimen>
+    <dimen name="font_29">27.5sp</dimen>
+    <dimen name="font_30">28.5sp</dimen>
+    <dimen name="font_70">68.5sp</dimen>
+
+</resources>
