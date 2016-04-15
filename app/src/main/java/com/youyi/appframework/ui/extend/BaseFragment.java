@@ -26,20 +26,20 @@ public abstract class BaseFragment extends Fragment {
 
     @Override
     public void onAttach(Activity activity) {
-        LogUtil.d(getName());
+        LogUtil.d(getName() + "-->onAttach()");
         super.onAttach(activity);
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        LogUtil.d(getName());
+        LogUtil.d(getName() + "-->onCreate()");
         super.onCreate(savedInstanceState);
-        EventBus.getDefault().register(this);
+//        EventBus.getDefault().register(this);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        LogUtil.d(getName());
+        LogUtil.d(getName() + "-->onCreateView()");
         if (view != null) {
             ViewGroup p = (ViewGroup) view.getParent();
 
@@ -56,13 +56,13 @@ public abstract class BaseFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        LogUtil.d(getName());
+        LogUtil.d(getName() + "--> onViewCreated()");
         super.onViewCreated(view, savedInstanceState);
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
-        LogUtil.d(getName());
+        LogUtil.d(getName() + "-->onActivityCreated()");
         super.onActivityCreated(savedInstanceState);
     }
 
@@ -74,13 +74,13 @@ public abstract class BaseFragment extends Fragment {
 
     @Override
     public void onStart() {
-        LogUtil.d(getName());
+        LogUtil.d(getName() + "-->onStart()");
         super.onStart();
     }
 
     @Override
     public void onResume() {
-        LogUtil.d(getName());
+        LogUtil.d(getName() + "-->onResume()");
         super.onResume();
         String name = getClass().getSimpleName();
 //        UmengAnalysisTools.onPageStart(name);
@@ -89,7 +89,7 @@ public abstract class BaseFragment extends Fragment {
 
     @Override
     public void onPause() {
-        LogUtil.d(getName());
+        LogUtil.d(getName() + "-->onPause()");
         super.onPause();
         String name = getClass().getSimpleName();
 //        UmengAnalysisTools.onPageEnd(name);
@@ -99,19 +99,19 @@ public abstract class BaseFragment extends Fragment {
 
     @Override
     public void onStop() {
-        LogUtil.d(getName());
+        LogUtil.d(getName() + "-->onStop()");
         super.onStop();
     }
 
     @Override
     public void onDestroyView() {
-        LogUtil.d(getName());
+        LogUtil.d(getName() + "-->onDestroyView()");
         super.onDestroyView();
     }
 
     @Override
     public void onDestroy() {
-        LogUtil.d(getName());
+        LogUtil.d(getName() + "-->onDestroy()");
         super.onDestroy();
 //        if(controler!=null)
 //            controler.onDestory();
@@ -119,9 +119,9 @@ public abstract class BaseFragment extends Fragment {
 
     @Override
     public void onDetach() {
-        LogUtil.d(getName());
+        LogUtil.d(getName() + "-->onDetach()");
         super.onDetach();
-        EventBus.getDefault().unregister(this);
+//        EventBus.getDefault().unregister(this);
     }
 
     /**
@@ -135,21 +135,21 @@ public abstract class BaseFragment extends Fragment {
 
     @Override
     public void startActivity(Intent intent) {
-        LogUtil.d(getName());
+        LogUtil.d(getName() + "-->startActivity()");
         super.startActivity(intent);
         onTransitionAnim();
     }
 
     @Override
     public void startActivityForResult(Intent intent, int requestCode) {
-        LogUtil.d(getName());
+        LogUtil.d(getName() + "-->startActivityForResult()");
         super.startActivityForResult(intent, requestCode);
         onTransitionAnim();
     }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        LogUtil.d(getName());
+        LogUtil.d(getName() + "-->onActivityResult()");
         super.onActivityResult(requestCode, resultCode, data);
     }
 

@@ -1,6 +1,6 @@
 package com.youyi.appframework.ui.activity;
 
-import android.support.v4.app.Fragment;
+import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
@@ -20,7 +20,6 @@ public class StartActivity extends BaseActivity {
         setContentView(R.layout.activity_start);
         FragmentManager fm = this.getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        Fragment mFragment = new StartFragment();
         ft.add(R.id.content_fragment, new StartFragment());
         ft.commit();
     }
@@ -32,7 +31,7 @@ public class StartActivity extends BaseActivity {
 
     @Override
     protected void initListener() {
-
+        //设置统计和启动接口
     }
 
     @Override
@@ -43,6 +42,12 @@ public class StartActivity extends BaseActivity {
     @Override
     public void doRefresh() {
 
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setSwipeEnabled(false);
     }
 
 }

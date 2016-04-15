@@ -55,16 +55,15 @@ public abstract class BaseActivity extends SwipeActivity implements IContext {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        LogUtil.d(TAG, this.getClass().getSimpleName() + "onCreate()");
-        super.onCreate(savedInstanceState);
+        LogUtil.d(TAG, this.getClass().getSimpleName() + "--->onCreate()");
         this.mUiThread = Looper.getMainLooper().getThread();
         AppManager.getInstance().addActivity(this);
-        EventBus.getDefault().register(this);
+//        EventBus.getDefault().register(this);
     }
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
-        LogUtil.d(TAG, this.getClass().getSimpleName() + "onPostCreate()");
+        LogUtil.d(TAG, this.getClass().getSimpleName() + "--->onPostCreate()");
         super.onPostCreate(savedInstanceState);
         // 注册网络监听网络服务
         registerNetworkConnectivityListener();
@@ -144,7 +143,7 @@ public abstract class BaseActivity extends SwipeActivity implements IContext {
     @Override
     protected void onResume() {
         super.onResume();
-        LogUtil.d(TAG, this.getClass().getSimpleName() + " onResume");
+        LogUtil.d(TAG, this.getClass().getSimpleName() + "--->onResume");
         if (!isActive) {
             isActive = true;
             LogUtil.d("Activity状态", "从后台————→前台");
@@ -155,7 +154,7 @@ public abstract class BaseActivity extends SwipeActivity implements IContext {
     protected void onPause() {
         super.onPause();
         super.onPause();
-        LogUtil.d(TAG, this.getClass().getSimpleName() + " onPause");
+        LogUtil.d(TAG, this.getClass().getSimpleName() + "--->onPause");
     }
 
     @Override
@@ -173,7 +172,7 @@ public abstract class BaseActivity extends SwipeActivity implements IContext {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        EventBus.getDefault().unregister(this);
+//        EventBus.getDefault().unregister(this);
         if (this.mNetworkConnectivityListener != null) {
             this.mNetworkConnectivityListener.stopListening();
         }

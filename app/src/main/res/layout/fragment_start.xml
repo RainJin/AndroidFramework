@@ -9,7 +9,8 @@
         android:layout_height="match_parent"
         android:layout_below="@id/abous_title"
         android:layout_centerHorizontal="true"
-        android:scaleType="centerCrop" />
+        android:scaleType="centerCrop"
+        android:src="@mipmap/start"/>
 
     <TextView
         android:id="@+id/tv_version"
