@@ -288,7 +288,7 @@ public class AccountManager {
 
 
     /**
-     * 获取用户详情保存至本地
+     * 获取用户详情保存至本地(内存和sp)
      *
      * @param profiles
      */
