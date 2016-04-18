@@ -246,7 +246,7 @@ public abstract class YYRequest {
                         return;
                     }
 
-                    LogUtil.e(TAG, "response success " + response);
+                    LogUtil.d(TAG, "response success " + response);
                     if (mClazz != null)
                         mListener.success(GsonUtil.fromJson(response, mClazz));
                     else

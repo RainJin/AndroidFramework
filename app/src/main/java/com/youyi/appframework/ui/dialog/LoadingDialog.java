@@ -135,7 +135,7 @@ public class LoadingDialog extends BaseDialog {
                 if (loadingDialog.isShowing())
                     loadingDialog.dismiss();
             }catch (Exception e){
-                LogUtil.e("LoadingDialog", "safeCloseDialog Exception " + e.getMessage());
+                LogUtil.d("LoadingDialog", "safeCloseDialog Exception " + e.getMessage());
             }
             loadingDialog = null;
         }

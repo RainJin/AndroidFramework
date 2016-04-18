@@ -25,7 +25,7 @@ public class HttpUtil {
                 encodedParams.append(URLEncoder.encode(entry.getValue(), paramsEncoding));
                 encodedParams.append('&');
             }
-            LogUtil.e(TAG, encodedParams.toString());
+            LogUtil.d(TAG, encodedParams.toString());
             return encodedParams.toString();
         } catch (UnsupportedEncodingException uee) {
             throw new RuntimeException("Encoding not supported: " + paramsEncoding, uee);
@@ -56,7 +56,7 @@ public class HttpUtil {
     public static String dealParamKey(String key) {
         String content = key;
         String regex = "\\[[0-9]\\d*\\]$";
-        LogUtil.e(TAG, content);
+        LogUtil.d(TAG, content);
 
         Matcher matcher = Pattern.compile(regex).matcher(content);
         if (matcher.find()) {

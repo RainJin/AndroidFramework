@@ -282,8 +282,8 @@ public class AndroidUtils {
         }
         List<String> targetItems = StringUtils.stringToList(targetVersion, StringUtils.VERSION_SEPERATOR);
         List<String> baseItems = StringUtils.stringToList(baseVersion, StringUtils.VERSION_SEPERATOR);
-        LogUtil.e("targetItems", targetItems.toString());
-        LogUtil.e("baseItems", baseItems.toString());
+        LogUtil.d("targetItems", targetItems.toString());
+        LogUtil.d("baseItems", baseItems.toString());
 
         if (CollectionUtils.isEmpty(targetItems) || CollectionUtils.isEmpty(baseItems)) {
             return false;
